@@ -7,7 +7,7 @@ jobs:
   lint-test:
     working_directory: ~/cloud-carbon-footprint
     docker:
-      - image: circleci/node:current
+      - image: cimg/node:20.11
     environment:
       MAJOR_REVISION: 0
       MINOR_REVISION: 0

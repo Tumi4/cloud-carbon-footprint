@@ -64,7 +64,7 @@
     "jest": "^27.4.7",
     "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.10",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.4.0",
     "ts-node-dev": "^2.0.0",
