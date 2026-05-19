@@ -26,6 +26,7 @@ import {
 import { GCPAccount, getGCPEmissionsFactors } from '@cloud-carbon-footprint/gcp'
 import { OnPremise } from '@cloud-carbon-footprint/on-premise'
 
+// eslint-disable-next-line unused-imports/no-unused-imports-ts, @typescript-eslint/no-unused-vars
 import cache from './Cache'
 import { EstimationRequest, RecommendationRequest } from './CreateValidRequest'
 import { promises as fs } from 'fs'

@@ -172,6 +172,7 @@ export class ServiceWrapper {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function enablePagination<RequestType, ResponseType>(nextPageProperty: string) {
   return (
     target: unknown,
