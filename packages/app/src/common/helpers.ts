@@ -9,6 +9,7 @@ import {
   EstimationResult,
   getPeriodEndDate,
   GroupBy,
+  ServiceData,
 } from '@cloud-carbon-footprint/common'
 import { EstimationRequest } from '../CreateValidRequest'
 import R from 'ramda'
@@ -110,10 +111,10 @@ export const fillDates = (
   })
 
   const difference = R.difference(missingDatesConverted, dates)
-  const emptyEstimates = difference.map((timestamp) => {
+  const emptyEstimates: EstimationResult[] = difference.map((timestamp) => {
     return {
       timestamp: timestamp,
-      serviceEstimates: [],
+      serviceEstimates: [] as ServiceData[],
       periodStartDate: timestamp,
       periodEndDate: getPeriodEndDate(timestamp, grouping),
       groupBy: grouping,

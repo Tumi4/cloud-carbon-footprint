@@ -115,7 +115,7 @@ export default class ConsumptionManagementService {
           new Date(consumptionRow.date) >= startDate &&
           new Date(consumptionRow.date) <= endDate,
       )
-      .map((consumptionRow: LegacyUsageDetail) => {
+      .forEach((consumptionRow: LegacyUsageDetail) => {
         const consumptionDetailRow: ConsumptionDetailRow =
           new ConsumptionDetailRow(consumptionRow)
 
@@ -135,7 +135,6 @@ export default class ConsumptionManagementService {
             [],
           )
         }
-        return []
       })
 
     if (results.length > 0) {

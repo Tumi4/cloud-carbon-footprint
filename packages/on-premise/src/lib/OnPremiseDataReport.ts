@@ -50,12 +50,12 @@ export default class OnPremiseDataReport {
   public getEstimates(usageRows: OnPremiseDataInput[]): OnPremiseDataOutput[] {
     const results: OnPremiseDataOutput[] = []
 
-    usageRows.map((onPremiseDataRow: OnPremiseDataInput) => {
+    usageRows.forEach((onPremiseDataRow: OnPremiseDataInput) => {
       const onPremiseDataReportRow: OnPremiseDataReportRow =
         new OnPremiseDataReportRow(onPremiseDataRow)
 
       const upTimeEstimates: { [key: string]: { [key: string]: number } } = {}
-      Object.keys(onPremiseDataReportRow.upTime).map((key) => {
+      Object.keys(onPremiseDataReportRow.upTime).forEach((key) => {
         const footprintEstimate = this.getFootprintEstimate(
           onPremiseDataReportRow,
           onPremiseDataReportRow.upTime[key],
@@ -84,7 +84,6 @@ export default class OnPremiseDataReport {
         }
         results.push(appendedRows)
       }
-      return []
     })
 
     return results
